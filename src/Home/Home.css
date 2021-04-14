@@ -1,0 +1,59 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  height: 360px;
+  width: 180px;
+  border-style:groove;
+  border-width: 1px;
+  border-radius: 5%;
+  box-shadow: 1px 1px 5px #888888;
+}
+.card img{
+  height: 70%;
+  width: 100%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.card .content{
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.content p {
+  margin: 0px;
+  font-weight: bold;
+}
+
+.content time{
+  margin-top: 0px;
+  color: #494646
+}
+.content .rate{
+  width:38px;
+  height:38px;
+  border-radius: 50%;
+  position: relative;
+  top: -25px;
+  left: 10px;
+  margin-bottom: 0px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate span{
+  font-size: medium;
+  color:white;
+}
+.movieCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.movieCards >  li{
+  list-style-type: none;
+}

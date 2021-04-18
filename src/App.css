@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+body{
+  margin: 0px;
+}
+header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width:100%;
+  /* background-image: url('https://jafinox-rdw.com/wp-content/uploads/2015/11/Background-header-service-light.jpg'); */
+  padding: 20px 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+header ul li{
+  display: inline;
+  margin:20px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 25px; 
+  font-family: 'Orelega One', cursive;
+}
+
+header ul li:hover {
+  background-color: #ddd;
+  color: black;
+}

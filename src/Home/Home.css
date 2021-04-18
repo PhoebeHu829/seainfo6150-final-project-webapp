@@ -1,19 +1,20 @@
 .card{
   display: flex;
   flex-direction: column;
+  align-content: flex-start;
   margin: 30px;
-  height: 360px;
-  width: 180px;
-  border-style:groove;
+  height: 400px;
+  width: 200px;
+  border-style:solid;
   border-width: 1px;
-  border-radius: 5%;
+  border-radius: 5px;
+  border-color: rgb(184, 195, 184);
   box-shadow: 1px 1px 5px #888888;
 }
 .card img{
-  height: 70%;
   width: 100%;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .card .content{
@@ -21,32 +22,53 @@
   flex-wrap: wrap;
 }
 
-.content p {
+.content{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  position: relative;
+}
+
+.content p, .content time {
   margin: 0px;
   font-weight: bold;
+  font-family: 'Orelega One', cursive;
+  padding-left: 3px;
+}
+
+.content p{
+  font-size: 18px;
+  padding-bottom: 3px;
+  margin-top: 26px
 }
 
 .content time{
+  font-size: 15px;
   margin-top: 0px;
-  color: #494646
+  color: #494646;
 }
 .content .rate{
   width:38px;
   height:38px;
   border-radius: 50%;
-  position: relative;
+  position: absolute;;
   top: -25px;
   left: 10px;
+  bottom:0px;
   margin-bottom: 0px;
-  background-color: #000;
+  background-color:rgb(65, 55, 52);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 1px 1px 5px #888888;
+  border-style: solid;
+  border-color: darkgreen;
 }
 
 .rate span{
   font-size: medium;
   color:white;
+  font-family: 'Orelega One', cursive;
 }
 .movieCards{
   display: flex;

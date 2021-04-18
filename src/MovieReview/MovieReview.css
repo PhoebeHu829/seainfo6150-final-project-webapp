@@ -1,0 +1,56 @@
+.form {
+  display: flex;
+  flex-direction:column;
+  margin-top: 30px;
+}
+
+.review_content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orelega One', cursive;
+  margin-left: -25%;
+}
+
+.form  label{
+  margin: 5px
+}
+
+.overview{
+  padding: 20px;
+}
+
+#myTextId{
+  width:100%;
+  margin:10px;
+  border-radius: 5px;
+  height:100px;
+}
+
+#myDropdown{
+  margin:10px;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+  font-family: 'Orelega One', cursive;
+}
+
+.button, .submit_review button{
+  width:50%;
+  border-radius: 15px;
+  padding: 10px;
+  margin:10px;
+  font-family: 'Orelega One', cursive;
+  border-width: 0px;
+  background-color: darkolivegreen;
+}
+
+.review_content img{
+  width:180px;
+  height:240px;
+  margin: 100px;
+  border-radius: 5px;
+}
+
+

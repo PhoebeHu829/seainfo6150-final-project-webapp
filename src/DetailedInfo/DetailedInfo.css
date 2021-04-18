@@ -1,24 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans+Condensed:wght@300&display=swap');
+
 .general {
- 
  background-repeat: no-repeat;
  justify-content: space-around;
- background-position: 50% 25%;
+ background-position: right -200px top;
  background-size: cover;
 }
 
 .poster img{
-  height: 80%;
-  width: 320px;
+height: 80%;
+ width: 300px;
+ margin-top: 50px;
+ margin-left: 20px;
+ border-radius: 2%;
+ border-width: 0px;
+ outline: none;
 }
 
 .wrapper{
-  background-image: linear-gradient(to right, rgb(47, 51, 54) 800px, rgba(45, 48, 51, 0.84) 100%);
+  background-image: linear-gradient(to right, rgba(10.98%, 11.76%, 12.55%, 1.00) 150px, rgba(10.98%, 11.76%, 12.55%, 0.84) 100%);
   display: flex;
 }
 
 .info{
-  opacity: 0.6;
   margin: 50px;
   color:white;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.info h1, .info h2{
+  font-family: 'Acme', sans-serif;
+}
+
+.info > span, .info time, .info p span{
+  margin: 10px;
+}
+
+.cost span{
+  margin: 10px;
+}
+
+.info button{
+  height: 40px;
+  width: 140px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: 'Acme', sans-serif;
+  background-color: antiquewhite;
 }
 

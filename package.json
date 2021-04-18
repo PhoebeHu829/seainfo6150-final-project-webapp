@@ -5,6 +5,7 @@
   "private": true,
   "proxy": "https://validator.w3.org/",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "lodash": "4.17.20",
     "node-fetch": "^2.6.1",
     "react": "^16.8.6",

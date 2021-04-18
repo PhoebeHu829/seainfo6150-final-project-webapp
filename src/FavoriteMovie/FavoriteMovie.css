@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.context ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.movieCard{
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 300px 500px 500px;
+  margin-bottom: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+ 
+}
+
+.movieCard .title {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  color:antiquewhite;
+}
+
+.movieCard img{
+  height:100%;
+  width: 100px;
+  border-radius: 5px;
+  /* border-style: solid;
+  border-color: antiquewhite;*/
+  /* box-shadow: 2px 2px 20px antiquewhite;  */
+}
+
+.basicInfo button{
+  height: 40px;
+  width: 100px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: antiquewhite;
+  border-style:none;
+}
+
+.context{
+  margin-top: 0px;
+  background-image: url('https://hdwallpaperim.com/wp-content/uploads/2017/08/23/472571-film_reel-movies.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow-y: scroll;
+}

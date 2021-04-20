@@ -21,6 +21,16 @@
   padding: 20px;
 }
 
+.overview > label{
+  padding-bottom:20px;
+}
+
+.overview div, .submit_review svg{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color:rgb(189, 145, 23);
+}
+
 #myTextId{
   width:100%;
   margin:10px;

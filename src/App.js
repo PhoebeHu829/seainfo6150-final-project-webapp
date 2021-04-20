@@ -4,8 +4,9 @@ import './App.css'
 import Home from "./Home/Home.jsx";
 import MovieInfo from "./MovieInfo/MovieInfo.jsx";
 import FavoriteMovie from "./FavoriteMovie/FavoriteMovie.jsx";
-import MovieReview from './MovieReview/MovieReview.jsx'
+import MovieReview from './MovieReview/MovieReview.jsx';
 import Error from "./Error/Error.jsx";
+import Loading from "./Loading/Loading";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -27,7 +28,6 @@ function App() {
     fetch('https://api.themoviedb.org/3/discover/movie?api_key=c1a32c68f363e400355e7be1a602cc66&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         const results = data.results;
         let tmp1 = {}
         let tmp2 = {}
@@ -42,17 +42,11 @@ function App() {
             [id]: i
           }
         }
-
         setIndexMap(tmp1)
         setIdMap(tmp2)
         fetchData(data);
-
       });
-
   }, []); // Only re-run the effect if count changes
-
-
-
 
   return (
     <>
@@ -109,7 +103,7 @@ function App() {
 
             <Route component={Error} />
           </Switch>
-        </>) : (<>loading</>)}
+        </>) : (<Loading />)}
     </>
   );
 }

@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import './DetailedInfo.css';
+import {
+    FaAngleDoubleLeft, FaAngleDoubleRight,
+    FaHeart
+} from "react-icons/fa";
+import { MdRateReview } from "react-icons/md";
+
+
 
 const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
     const { poster_path, backdrop_path,
@@ -8,10 +15,8 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
         genres, runtime, tagline, overview,
         budget, revenue, production_companies,
         vote_average, vote_count, id } = movie;
-    //console.log(index_id_map, id_index_map);
 
-
-    const current_index = id_index_map[id]
+    const current_index = id_index_map[id];
     const pre_movie_id = index_id_map[current_index - 1];
     const next_movie_id = index_id_map[current_index + 1];
 
@@ -20,7 +25,6 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
     const time = Math.floor(runtime / 60) + 'h' + (runtime % 60) + 'min'
     const genres_list = genres.map((gen) => <span key={gen.id}> {gen.name + ", "}</span>);
     const company_list = production_companies.map((com) => <li key={com.id}>{com.name} </li>);
-    console.log(id);
 
     const fav_ed = () => {
         for (let i = 0; i < fav.length; i++) {
@@ -33,19 +37,14 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
     const [infavList, removeFromlist] = useState(fav_ed);
 
     const handleFav = (event) => {
-        const action = event.target.innerHTML.trim();
-        if (action === 'Add to Favorite') {
-            addFav([...fav, movie]);
-            removeFromlist(true);
-        } else {
-            const update_fav = fav.filter((m) => m.id != id);
-            addFav(update_fav);
-            removeFromlist(false);
-        }
+        addFav([...fav, movie]);
+        removeFromlist(true);
     }
 
-    const handleReview = (event) => {
-        console.log(event.target);
+    const handleRemoveFav = (event) => {
+        const update_fav = fav.filter((m) => m.id !== id);
+        addFav(update_fav);
+        removeFromlist(false);
     }
 
     return (
@@ -53,8 +52,11 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
             backgroundImage: `url(${backdrop})`
         }}>
             <div className='wrapper'>
+                {(current_index === 0) ? '' : <Link to={"/movie/" + pre_movie_id} className='sign'>
+                    <FaAngleDoubleLeft />
+                </Link>}
 
-                <div className='poster'>
+                <div className='poster' >
                     <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + poster_path} />
                 </div>
                 <div className='info'>
@@ -63,9 +65,10 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
                     <span>{genres_list}</span>
                     {time}
                     <p> <span> User Vote:  {'  ' + vote_average + ' / 10 '} </span>Vote Total Num: {' ' + vote_count}</p>
-                    <button onClick={handleFav}> {(infavList) ? 'Remove from Favorite' : 'Add to Favorite'}</button>
+                    {(infavList) ? <span onClick={handleRemoveFav} className='signInDetail liked'> <FaHeart /> </span> :
+                        <span onClick={handleFav} className='signInDetail'> <FaHeart /> </span>}
                     <Link to={'/movieReview/' + id}>
-                        <button > Write Movie Review</button>
+                        <span className='signInDetail'> <MdRateReview /></span>
                     </Link>
                     <h2>{tagline}</h2>
                     <p> {overview}</p>
@@ -75,15 +78,10 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
                         <p><span> Budget: </span>  {budget > 0 ? ('$' + budget) : '-'}</p>
                         <p><span> Revenue: </span> {revenue > 0 ? ('$' + revenue) : '-'}</p>
                     </div>
-                    <Link to={"/movie/" + pre_movie_id}>
-                        <button> Pre</button>
-                    </Link>
-
-                    <Link to={"/movie/" + next_movie_id}>
-                        <button> Next</button>
-                    </Link>
                 </div>
-
+                <Link to={"/movie/" + next_movie_id} className='sign'>
+                    <FaAngleDoubleRight />
+                </Link>
             </div>
         </div >
     )

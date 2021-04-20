@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import './FavoriteMovie.css';
+import { FaTrashAlt, FaRocket, FaRegTired } from "react-icons/fa";
 
 const FavoriteMovie = ({ fav_list, set_fav }) => {
     let movie_list;
     const handleRmove = (event, id) => {
-        //console.log(event.target, id);
-        const update_fav = fav_list.filter((m) => m.id != id);
+        const update_fav = fav_list.filter((m) => m.id !== id);
         set_fav(update_fav);
     }
 
@@ -19,7 +19,7 @@ const FavoriteMovie = ({ fav_list, set_fav }) => {
                 <div className='basicInfo'>
                     <Link className='title' to={"/movie/" + fav.id} style={{ textDecoration: 'none' }}>{fav.title}</Link>
                     <p>{fav.status}</p>
-                    <button onClick={(e) => handleRmove(e, fav.id)}> Remove from Favorite</button>
+                    <span onClick={(e) => handleRmove(e, fav.id)}> <FaTrashAlt /> </span>
                 </div>
                 <div className='overview'><p>{fav.overview}</p></div>
             </li >
@@ -28,8 +28,18 @@ const FavoriteMovie = ({ fav_list, set_fav }) => {
     return (
         <>
             {movie_list ?
-                <ul className="context">{movie_list}</ul> :
-                'loading'}
+                <div className='wrapper_fav'>
+                    <ul className="context">{movie_list}</ul>
+                </div> :
+                <div className="empty">
+                    <img src={'https://www.chicagotribune.com/resizer/r7Fd_82tBo66BARHU1yGFjw21d8=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/XSC7TYCORRGVFIAPCJABQNLRME.jpg'} />
+                    <div className='empty_info'>
+                        <p> <FaRegTired /> Seems You Do Not Have Any Favorite Movies.</p>
+                        <Link to='/' style={{ textDecoration: 'none' }}>
+                            <h3><FaRocket /> Explore Some</h3>
+                        </Link>
+                    </div>
+                </div>}
         </>
     )
 }

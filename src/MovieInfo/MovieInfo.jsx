@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import DetailedInfo from '../DetailedInfo/DetailedInfo';
+import Loading from '../Loading/Loading';
 
 const MovieInfo = ({ movieId, addFav, fav, index_id_map, id_index_map }) => {
     const [movieInfo, setMovieInfo] = useState(null);
@@ -14,15 +15,13 @@ const MovieInfo = ({ movieId, addFav, fav, index_id_map, id_index_map }) => {
             })
     }, [movieId])
 
-    console.log({ movieId })
-
     return (
         <>
             {movieInfo ?
                 <DetailedInfo movie={movieInfo} addFav={addFav}
                     fav={fav} index_id_map={index_id_map}
                     id_index_map={id_index_map} />
-                : 'loading'}
+                : <Loading />}
         </>
     )
 }

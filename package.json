@@ -6,10 +6,16 @@
   "proxy": "https://validator.w3.org/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "lodash": "4.17.20",
     "node-fetch": "^2.6.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-icons": "^4.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.0.0"
   },

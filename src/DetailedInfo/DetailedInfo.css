@@ -5,10 +5,11 @@
  justify-content: space-around;
  background-position: right -200px top;
  background-size: cover;
+ margin-right: 0px;
 }
 
 .poster img{
-height: 80%;
+ height: 60%;
  width: 300px;
  margin-top: 50px;
  margin-left: 20px;
@@ -20,6 +21,8 @@ height: 80%;
 .wrapper{
   background-image: linear-gradient(to right, rgba(10.98%, 11.76%, 12.55%, 1.00) 150px, rgba(10.98%, 11.76%, 12.55%, 0.84) 100%);
   display: flex;
+  justify-content: space-around;
+  height: 100vh;
 }
 
 .info{
@@ -49,3 +52,31 @@ height: 80%;
   background-color: antiquewhite;
 }
 
+.signInDetail svg{
+  color:white;
+  width:25px;
+  height:50px;
+  margin: 5px;
+}
+
+.liked svg{
+  color:red;
+}
+
+.sign svg{
+  color:white;
+  opacity: 0.6;
+  height:100px;
+  width:50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0px;
+}
+
+.sign svg:hover{
+  color:rgb(184, 17, 11);
+}
+
+.sign{
+  display: flex;
+}

@@ -7,6 +7,7 @@ import FavoriteMovie from "./FavoriteMovie/FavoriteMovie.jsx";
 import MovieReview from './MovieReview/MovieReview.jsx';
 import Error from "./Error/Error.jsx";
 import Loading from "./Loading/Loading";
+import Contact from './Contact/Contact'
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -66,6 +67,9 @@ function App() {
                   {(data) ? <Link to={"/movieReview/" + data.results[0].id} style={{ textDecoration: 'none' }}>Movie Review </Link>
                     : 'loading'}
                 </li>
+                <li className='app_signup'>
+                  <Link to="/contact" style={{ textDecoration: 'none' }}>Sign Up</Link>
+                </li>
               </ul>
             </nav>
           </header>
@@ -101,7 +105,7 @@ function App() {
               render={({ match }) => (<MovieReview data={data} id={match.params.id}
                 submittedForm={submittedForm} setSubmittedForm={setSubmittedForm} />)}
             />
-
+            <Route path="/contact" exact component={Contact} />
             <Route component={Error} />
           </Switch>
         </>) : (<Loading />)}

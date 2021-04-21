@@ -28,6 +28,12 @@ header ul li:hover {
   color: black;
 }
 
+.app_signup{
+  position: absolute;
+  right:50px;
+  top:0px;
+}
+
 /* header ul li a.active {
   background-color: dodgerblue;
   color: white;

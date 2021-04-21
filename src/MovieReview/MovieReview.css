@@ -37,6 +37,10 @@
   color:rgb(189, 145, 23);
 }
 
+.overview div:hover{
+  color:rgb(58, 5, 156);
+}
+
 #myTextId{
   width:100%;
   margin:10px;
@@ -71,6 +75,7 @@
   height:240px;
   margin: 100px;
   border-radius: 5px;
+  box-shadow: 1px 1px 50px #888888;
 }
 
 

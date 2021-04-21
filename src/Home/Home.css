@@ -9,8 +9,13 @@
   border-width: 1px;
   border-radius: 5px;
   border-color: rgb(184, 195, 184);
-  box-shadow: 1px 1px 5px #888888;
+  
 }
+
+.card:hover {
+  box-shadow: 10px 10px 50px rgb(92, 95, 92);
+}
+
 .card img{
   width: 100%;
   border-top-left-radius: 5px;
@@ -60,7 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 1px 1px 5px #888888;
+  box-shadow: 2px 2px 5px #888888;
   border-style: solid;
   border-color: darkgreen;
 }

@@ -63,3 +63,7 @@
 .empty img{
   height: 200px;
 }
+
+.empty h3:hover{
+  color: rgb(202, 123, 19);
+}

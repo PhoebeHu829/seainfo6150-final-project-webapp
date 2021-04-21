@@ -9,8 +9,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: 'Orelega One', cursive;
+  font-family: 'Patrick Hand', cursive;
   margin-left: -25%;
+  margin-top: -10%;
+  height: 100vh;
+  background-image: url('https://data.photofunky.net/output/image/e/1/b/a/e1ba35/photofunky.gif');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  font-size: 20px;
 }
 
 .form  label{
@@ -36,14 +42,17 @@
   margin:10px;
   border-radius: 5px;
   height:100px;
+  border-color: rgb(58, 5, 156);
 }
 
 #myDropdown{
   margin:10px;
   border-radius: 5px;
-  height: 30px;
+  border-color: rgb(58, 5, 156);
+  height: 40px;
   padding: 5px;
-  font-family: 'Orelega One', cursive;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 18px;
 }
 
 .button, .submit_review button{
@@ -51,9 +60,10 @@
   border-radius: 15px;
   padding: 10px;
   margin:10px;
-  font-family: 'Orelega One', cursive;
+  font-family: 'Patrick Hand', cursive;
   border-width: 0px;
-  background-color: darkolivegreen;
+  background-color: rgb(58, 5, 156);
+  color: azure;
 }
 
 .review_content img{
@@ -62,5 +72,7 @@
   margin: 100px;
   border-radius: 5px;
 }
+
+
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Anton&family=Crimson+Text:wght@700&display=swap');
 
 .general {
  background-repeat: no-repeat;
@@ -11,11 +11,10 @@
 .poster img{
  height: 60%;
  width: 300px;
- margin-top: 50px;
- margin-left: 20px;
+ margin-top: 110px;
+ margin-left: 100px;
  border-radius: 2%;
  border-width: 0px;
- outline: none;
 }
 
 .wrapper{
@@ -26,13 +25,14 @@
 }
 
 .info{
-  margin: 50px;
-  color:white;
-  font-family: 'Open Sans Condensed', sans-serif;
+  margin:50px;
+  color:  #ddd;
+  font-family: 'Crimson Text', serif;
 }
 
 .info h1, .info h2{
   font-family: 'Acme', sans-serif;
+  color :#ddd;
 }
 
 .info > span, .info time, .info p span{
@@ -55,12 +55,19 @@
 .signInDetail svg{
   color:white;
   width:25px;
-  height:50px;
+  height:25px;
   margin: 5px;
+}
+.review_link svg:hover,.sign svg:hover{
+  color:yellowgreen;
 }
 
 .liked svg{
   color:red;
+}
+
+.heart svg:hover{
+  color:rgb(187, 93, 93);
 }
 
 .sign svg{
@@ -73,9 +80,6 @@
   margin-right: 0px;
 }
 
-.sign svg:hover{
-  color:rgb(184, 17, 11);
-}
 
 .sign{
   display: flex;

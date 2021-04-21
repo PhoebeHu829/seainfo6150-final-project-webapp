@@ -5,11 +5,10 @@ import {
     FaAngleDoubleLeft, FaAngleDoubleRight,
     FaHeart
 } from "react-icons/fa";
-import { MdRateReview } from "react-icons/md";
+import { MdRateReview, MdDateRange, MdAvTimer, MdThumbUp, MdVideoLibrary, MdMovieFilter } from "react-icons/md";
 
+const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map, submittedForm, totalNum }) => {
 
-
-const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
     const { poster_path, backdrop_path,
         original_title, release_date,
         genres, runtime, tagline, overview,
@@ -22,8 +21,18 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
 
     const PATHROOT = 'https://www.themoviedb.org/t/p/w1920_and_h800_bestv2/';
     const backdrop = PATHROOT + backdrop_path;
-    const time = Math.floor(runtime / 60) + 'h' + (runtime % 60) + 'min'
-    const genres_list = genres.map((gen) => <span key={gen.id}> {gen.name + ", "}</span>);
+    const time = Math.floor(runtime / 60) + ' h ' + (runtime % 60) + ' min'
+    const genres_list = [];
+
+    for (let i = 0; i < genres.length; i++) {
+        const gen = genres[i];
+        if (i === genres.length - 1) {
+            genres_list.push(<span key={gen.id}> {gen.name + "  "}</span>);
+        } else {
+            genres_list.push(<span key={gen.id}> {gen.name + ", "}</span>);
+        }
+
+    }
     const company_list = production_companies.map((com) => <li key={com.id}>{com.name} </li>);
 
     const fav_ed = () => {
@@ -61,14 +70,14 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
                 </div>
                 <div className='info'>
                     <h1>{original_title}</h1>
-                    <time>{release_date} </time>
-                    <span>{genres_list}</span>
-                    {time}
-                    <p> <span> User Vote:  {'  ' + vote_average + ' / 10 '} </span>Vote Total Num: {' ' + vote_count}</p>
-                    {(infavList) ? <span onClick={handleRemoveFav} className='signInDetail liked'> <FaHeart /> </span> :
-                        <span onClick={handleFav} className='signInDetail'> <FaHeart /> </span>}
+                    <time><MdDateRange /> {release_date} </time>
+                    <span><MdMovieFilter />{genres_list}</span>
+                    <span><MdAvTimer />{time}</span>
+                    <p> <span> <MdThumbUp />  {'  ' + (vote_average * 10) + ' % '} </span><MdVideoLibrary /> {'  ' + vote_count}</p>
+                    {(infavList) ? <span onClick={handleRemoveFav} className='signInDetail liked heart'> <FaHeart /> </span> :
+                        <span onClick={handleFav} className='signInDetail heart'> <FaHeart /> </span>}
                     <Link to={'/movieReview/' + id}>
-                        <span className='signInDetail'> <MdRateReview /></span>
+                        <span className='signInDetail review_link'> <MdRateReview /></span>
                     </Link>
                     <h2>{tagline}</h2>
                     <p> {overview}</p>
@@ -78,10 +87,16 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map }) => {
                         <p><span> Budget: </span>  {budget > 0 ? ('$' + budget) : '-'}</p>
                         <p><span> Revenue: </span> {revenue > 0 ? ('$' + revenue) : '-'}</p>
                     </div>
+                    <div> {(submittedForm) ?
+                        (<div>
+                            {submittedForm.general}
+                            <p> {submittedForm.detail}</p>
+                        </div>) : ''}
+                    </div>
                 </div>
-                <Link to={"/movie/" + next_movie_id} className='sign'>
+                {(current_index === totalNum - 1) ? '' : <Link to={"/movie/" + next_movie_id} className='sign'>
                     <FaAngleDoubleRight />
-                </Link>
+                </Link>}
             </div>
         </div >
     )

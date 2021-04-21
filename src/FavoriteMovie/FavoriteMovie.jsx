@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './FavoriteMovie.css';
 import { FaTrashAlt, FaRocket, FaRegTired } from "react-icons/fa";
 
-const FavoriteMovie = ({ fav_list, set_fav }) => {
+const FavoriteMovie = ({ fav_list, set_fav, first_movie }) => {
     let movie_list;
     const handleRmove = (event, id) => {
         const update_fav = fav_list.filter((m) => m.id !== id);
@@ -35,7 +35,7 @@ const FavoriteMovie = ({ fav_list, set_fav }) => {
                     <img src={'https://www.chicagotribune.com/resizer/r7Fd_82tBo66BARHU1yGFjw21d8=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/XSC7TYCORRGVFIAPCJABQNLRME.jpg'} />
                     <div className='empty_info'>
                         <p> <FaRegTired /> Seems You Do Not Have Any Favorite Movies.</p>
-                        <Link to='/' style={{ textDecoration: 'none' }}>
+                        <Link to={'/movie/' + first_movie} style={{ textDecoration: 'none' }}>
                             <h3><FaRocket /> Explore Some</h3>
                         </Link>
                     </div>

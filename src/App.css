@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 body{
   margin: 0px;
@@ -26,3 +27,8 @@ header ul li:hover {
   background-color: #ddd;
   color: black;
 }
+
+/* header ul li a.active {
+  background-color: dodgerblue;
+  color: white;
+} */

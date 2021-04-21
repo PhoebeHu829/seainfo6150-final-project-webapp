@@ -13,8 +13,8 @@
   display: grid;
   grid-template-columns: 300px 500px 500px;
   margin-bottom: 30px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 15px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 18px;
   font-weight: bolder;
   text-align: center;
   align-items: center;
@@ -56,6 +56,8 @@
   margin-left: -120px;
   margin-top: -100px;
   height: 100vh;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
 }
 
 .empty img{

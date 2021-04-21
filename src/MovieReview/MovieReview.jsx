@@ -19,6 +19,7 @@ const MoviewReview = ({ data, id, setSubmittedForm, submittedForm }) => {
   const handleReviewAgain = (event) => {
     setSubmittedForm();
   }
+
   useEffect(() => {
     setSubmittedForm()
   }, [id])

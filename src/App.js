@@ -10,12 +10,12 @@ import Loading from "./Loading/Loading";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
-const externalContent = {
-  id: "article-1",
-  title: "An Article",
-  author: "April Bingham",
-  text: "Some text in the article",
-};
+// const externalContent = {
+//   id: "article-1",
+//   title: "An Article",
+//   author: "April Bingham",
+//   text: "Some text in the article",
+// };
 
 function App() {
   const [data, fetchData] = useState();
@@ -87,13 +87,14 @@ function App() {
                   fav={fav}
                   index_id_map={index_id_map}
                   id_index_map={id_index_map}
+                  totalNum={data.results.length}
                 />
               )}
             />
             <Route
               path="/favoirte"
               exact
-              render={() => <FavoriteMovie fav_list={fav} set_fav={addFav} />}
+              render={() => <FavoriteMovie fav_list={fav} set_fav={addFav} first_movie={index_id_map[0]} />}
             />
 
             <Route path="/movieReview/:id/"

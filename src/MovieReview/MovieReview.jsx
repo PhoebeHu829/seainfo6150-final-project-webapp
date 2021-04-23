@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
 const MoviewReview = ({ data, id, setSubmittedForm, submittedForm }) => {
-
-  console.log(submittedForm);
   const [movie_review, change_movie] = useState(id);
   const movies = data.results;
   const option_list = movies.map((m) => <option value={m.id} key={m.id}> {m.title}</option>);
@@ -22,12 +20,13 @@ const MoviewReview = ({ data, id, setSubmittedForm, submittedForm }) => {
 
   useEffect(() => {
     setSubmittedForm()
-  }, [id])
+  }, [id, setSubmittedForm])
 
   function onSubmit(e) {
     e.preventDefault();
     const data = new FormData(e.target);
     const iterator = data.values();
+    console.log(iterator);
     const general_review = iterator.next().value;
     let general_review_back;
     switch (general_review) {
@@ -58,7 +57,7 @@ const MoviewReview = ({ data, id, setSubmittedForm, submittedForm }) => {
   return (
     <div className='review_content'>
       <Link to={"/movie/" + movie_review}>
-        <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + path_map.get(parseInt(movie_review), 10)} />
+        <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + path_map.get(parseInt(movie_review), 10)} alt="poster" />
       </Link>
       {(submittedForm) ?
         <div className='submit_review'> <h2>Thank you review {submittedForm.title}</h2>
@@ -88,7 +87,6 @@ const MoviewReview = ({ data, id, setSubmittedForm, submittedForm }) => {
           </form>
         </>
       }
-
     </div >
   )
 }

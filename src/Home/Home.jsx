@@ -12,7 +12,7 @@ const Home = ({ movieData }) => {
         return <li key={movie.id}>
             <div className='card' >
                 <Link to={"/movie/" + movie.id}>
-                    <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + movie.poster_path} />
+                    <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + movie.poster_path} alt="poster" />
                 </Link>
                 <div className='content'>
                     <div className="rate">

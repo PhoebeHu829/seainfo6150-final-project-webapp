@@ -66,7 +66,7 @@ const DetailedInfo = ({ movie, addFav, fav, index_id_map, id_index_map, submitte
                 </Link>}
 
                 <div className='poster' >
-                    <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + poster_path} />
+                    <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + poster_path} alt="poster" />
                 </div>
                 <div className='info'>
                     <h1>{original_title}</h1>

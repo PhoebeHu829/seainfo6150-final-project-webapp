@@ -9,21 +9,13 @@ import Error from "./Error/Error.jsx";
 import Loading from "./Loading/Loading";
 import Contact from './Contact/Contact'
 
-// here is some external content. look at the /baz route below
-// to see how this content is passed down to the components via props
-// const externalContent = {
-//   id: "article-1",
-//   title: "An Article",
-//   author: "April Bingham",
-//   text: "Some text in the article",
-// };
-
 function App() {
   const [data, fetchData] = useState();
   const [fav, addFav] = useState([]);
   const [submittedForm, setSubmittedForm] = useState();
   const [index_id_map, setIndexMap] = useState({});
   const [id_index_map, setIdMap] = useState({});
+  const [user, setUser] = useState();
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/discover/movie?api_key=c1a32c68f363e400355e7be1a602cc66&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate')
@@ -64,17 +56,16 @@ function App() {
                   <Link to="/favoirte" style={{ textDecoration: 'none' }}>Favoirte Movie</Link>
                 </li>
                 <li>
-                  {(data) ? <Link to={"/movieReview/" + data.results[0].id} style={{ textDecoration: 'none' }}>Movie Review </Link>
-                    : 'loading'}
+                  <Link to={"/movieReview/" + data.results[0].id} style={{ textDecoration: 'none' }}>Movie Review </Link>
+
                 </li>
                 <li className='app_signup'>
-                  <Link to="/contact" style={{ textDecoration: 'none' }}>Sign Up</Link>
+                  {(user) ? <span>{'Hello, ' + user.firstName} </span> : <Link to="/contact" style={{ textDecoration: 'none' }}>Sign Up</Link>}
                 </li>
               </ul>
             </nav>
           </header>
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
+
           <Switch>
             <Route path="/" exact >
               <Home movieData={data} />
@@ -83,8 +74,6 @@ function App() {
               path="/movie/:movieId"
               exact
               render={({ match }) => (
-                // getting the parameters from the url and passing
-                // down to the component as props
                 <MovieInfo
                   movieId={match.params.movieId}
                   addFav={addFav}
@@ -105,10 +94,13 @@ function App() {
               render={({ match }) => (<MovieReview data={data} id={match.params.id}
                 submittedForm={submittedForm} setSubmittedForm={setSubmittedForm} />)}
             />
-            <Route path="/contact" exact component={Contact} />
+            <Route path="/contact" exact >
+              <Contact user={user} setUser={setUser} />
+            </Route>
             <Route component={Error} />
           </Switch>
-        </>) : (<Loading />)}
+        </>) : (<Loading />)
+      }
     </>
   );
 }

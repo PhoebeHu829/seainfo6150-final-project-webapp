@@ -8,6 +8,17 @@
   background-position: right bottom;
 }
 
+.contact_page .feedback{
+   height:600px
+}
+.contact_page .feedback h2{
+  margin-top: 30px;
+  margin-left: 80px;
+}
+.contact_page .feedback p{
+  margin: 80px;
+}
+
 .contact_page form{
   margin-top: 50px;
   padding: 20px;
@@ -29,7 +40,6 @@
 
 .contact_page input{
   height:20px;
-  
 }
 
 .contact_button{

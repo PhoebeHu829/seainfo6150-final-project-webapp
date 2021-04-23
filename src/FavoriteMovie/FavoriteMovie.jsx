@@ -14,7 +14,7 @@ const FavoriteMovie = ({ fav_list, set_fav, first_movie }) => {
         movie_list = fav_list.map((fav) => {
             return <li key={fav.id} className='movieCard'>
                 <Link to={"/movie/" + fav.id} >
-                    <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + fav.poster_path} />
+                    <img src={'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/' + fav.poster_path} alt="poster" />
                 </Link>
                 <div className='basicInfo'>
                     <Link className='title' to={"/movie/" + fav.id} style={{ textDecoration: 'none' }}>{fav.title}</Link>
@@ -32,7 +32,7 @@ const FavoriteMovie = ({ fav_list, set_fav, first_movie }) => {
                     <ul className="context">{movie_list}</ul>
                 </div> :
                 <div className="empty">
-                    <img src={'https://www.chicagotribune.com/resizer/r7Fd_82tBo66BARHU1yGFjw21d8=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/XSC7TYCORRGVFIAPCJABQNLRME.jpg'} />
+                    <img src={'https://www.chicagotribune.com/resizer/r7Fd_82tBo66BARHU1yGFjw21d8=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/XSC7TYCORRGVFIAPCJABQNLRME.jpg'} alt="background" />
                     <div className='empty_info'>
                         <p> <FaRegTired /> Seems You Do Not Have Any Favorite Movies.</p>
                         <Link to={'/movie/' + first_movie} style={{ textDecoration: 'none' }}>

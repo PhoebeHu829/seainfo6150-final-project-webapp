@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieInfo tests renders correctly 1`] = `
+<div>
+  <div
+    class="loading"
+  >
+    <img
+      alt="loading"
+      src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2015/11/ispinner.jpg?fit=400%2C298&ssl=1"
+    />
+  </div>
+</div>
+`;

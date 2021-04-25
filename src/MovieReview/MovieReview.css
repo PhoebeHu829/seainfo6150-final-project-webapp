@@ -1,10 +1,10 @@
 .form {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   margin-top: 30px;
 }
 
-.review_content{
+.review_content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,38 +19,39 @@
   font-size: 20px;
 }
 
-.form  label{
-  margin: 5px
+.form label {
+  margin: 5px;
 }
 
-.overview{
+.overview {
   padding: 20px;
 }
 
-.overview > label{
-  padding-bottom:20px;
+.overview > label {
+  padding-bottom: 20px;
 }
 
-.overview div, .submit_review svg{
+.overview div,
+.submit_review svg {
   margin-top: 5px;
   margin-bottom: 5px;
-  color:rgb(189, 145, 23);
+  color: rgb(189, 145, 23);
 }
 
-.overview div:hover{
-  color:rgb(58, 5, 156);
+.overview div:hover {
+  color: rgb(58, 5, 156);
 }
 
-#myTextId{
-  width:100%;
-  margin:10px;
+#myTextId {
+  width: 100%;
+  margin: 10px;
   border-radius: 5px;
-  height:100px;
+  height: 100px;
   border-color: rgb(58, 5, 156);
 }
 
-#myDropdown{
-  margin:10px;
+#myDropdown {
+  margin: 10px;
   border-radius: 5px;
   border-color: rgb(58, 5, 156);
   height: 40px;
@@ -59,25 +60,49 @@
   font-size: 18px;
 }
 
-.button, .submit_review button{
-  width:50%;
+.button,
+.submit_review button {
+  width: 50%;
   border-radius: 15px;
   padding: 10px;
-  margin:10px;
+  margin: 10px;
   font-family: 'Patrick Hand', cursive;
   border-width: 0px;
   background-color: rgb(58, 5, 156);
   color: azure;
 }
 
-.review_content img{
-  width:180px;
-  height:240px;
+.review_content img {
+  width: 180px;
+  height: 240px;
   margin: 100px;
   border-radius: 5px;
   box-shadow: 1px 1px 50px #888888;
 }
 
+.review_content img:hover {
+  box-shadow: 1px 1px 50px #f16969;
+}
 
+@media only screen and (max-width: 1000px) {
+  .review_content {
+    background-image: none;
+  }
 
+  .review_content img {
+    margin-right: 10px;
+  }
+}
 
+@media only screen and (max-width: 750px) {
+  .review_content img {
+    display: none;
+  }
+
+  .form,
+  #myDropdown {
+    display: flex;
+    width: 60%;
+    font-size: 15px;
+  }
+}

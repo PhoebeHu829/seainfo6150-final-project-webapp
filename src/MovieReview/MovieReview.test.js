@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './Home.jsx';
+import MovieReview from './MovieReview.jsx';
 
 const data = {
   page: 1,
@@ -23,7 +23,14 @@ const data = {
   ],
 };
 
-it('renders the home component correctly', () => {
-  const { container } = render(<Home movieData={data} />);
+it('renders the MovieReview component correctly', () => {
+  const { container } = render(
+    <MovieReview
+      data={data}
+      id={'399655'}
+      submittedForm={[]}
+      setSubmittedForm={() => {}}
+    />,
+  );
   expect(container).toMatchSnapshot();
 });

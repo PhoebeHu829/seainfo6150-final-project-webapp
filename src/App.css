@@ -1,25 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
-body{
+body {
   margin: 0px;
 }
 header {
   overflow: hidden;
   background-color: #f1f1f1;
-  width:100%;
-  /* background-image: url('https://jafinox-rdw.com/wp-content/uploads/2015/11/Background-header-service-light.jpg'); */
+  width: 100%;
   padding: 20px 10px;
   margin-left: 0px;
   margin-right: 0px;
 }
-header ul li{
+header ul li {
   display: inline;
-  margin:20px;
+  margin: 20px;
   text-align: center;
   padding: 12px;
   border-radius: 4px;
-  font-size: 25px; 
+  font-size: 25px;
   font-family: 'Orelega One', cursive;
 }
 
@@ -28,13 +24,56 @@ header ul li:hover {
   color: black;
 }
 
-.app_signup{
+.app_signup {
   position: absolute;
-  right:50px;
-  top:0px;
+  right: 50px;
+  top: 0px;
 }
 
-/* header ul li a.active {
-  background-color: dodgerblue;
-  color: white;
-} */
+.app_signup span {
+  margin-right: 30px;
+  color: coral;
+}
+
+.signout {
+  font-family: 'Orelega One', cursive;
+  text-align: center;
+  border-width: 0px;
+  border-radius: 4px;
+  font-size: 25px;
+  color: coral;
+}
+
+@media only screen and (max-width: 972px) {
+  header ul li {
+    margin: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Orelega One', cursive;
+    margin-bottom: 0px;
+  }
+
+  .app_signup {
+    position: relative;
+    right: 0px;
+    top: 0px;
+  }
+
+  .app_signup span {
+    margin-right: 30px;
+    color: coral;
+    font-size: 0px;
+    margin-top: 0px;
+  }
+
+  .signout {
+    font-family: 'Orelega One', cursive;
+    text-align: center;
+    border-width: 0px;
+    border-radius: 4px;
+    font-size: 20px;
+    color: coral;
+    margin-top: 0px;
+  }
+}

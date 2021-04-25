@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the MovieReview component correctly 1`] = `
+<div>
+  <div
+    class="review_content"
+  >
+    <a
+      href="/movie/399655"
+    >
+      <img
+        alt="poster"
+        src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/undefined"
+      />
+    </a>
+    <form
+      class="form"
+    >
+      <label
+        for="myDropdownId"
+      >
+        Which moview you want to review?
+      </label>
+      <div>
+        <select
+          id="myDropdown"
+        >
+          <option
+            value="460465"
+          >
+             Mortal Kombat
+          </option>
+        </select>
+      </div>
+      <div
+        class="submit_review"
+      >
+         
+        <h2>
+          Thank you review 
+        </h2>
+        <p>
+           
+        </p>
+        <button>
+           Review Again
+        </button>
+      </div>
+    </form>
+    )}
+  </div>
+</div>
+`;

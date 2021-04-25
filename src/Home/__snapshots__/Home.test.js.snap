@@ -3,90 +3,49 @@
 exports[`renders the home component correctly 1`] = `
 <div>
   <div>
-    The home page
-    <h1>
-      I changed this homepage
-    </h1>
-    <img
-      alt="tree frog"
-      src="treefrog.jpg"
-    />
-    <div>
-      <form>
-        <label
-          for="myTextId"
+    <ul
+      class="movieCards"
+    >
+      <li>
+        <div
+          class="card"
         >
-          Input
-        </label>
-        <input
-          id="myTextId"
-          name="myText"
-          type="text"
-        />
-        <label
-          for="myDropdownId"
-        >
-          Input
-        </label>
-        <select
-          id="myDropdownId"
-          name="myDropdown"
-        >
-          <option
-            value="foo"
+          <a
+            href="/movie/460465"
           >
-            Foo
-          </option>
-          <option
-            value="bar"
+            <img
+              alt="poster"
+              src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2//2xmx8oPlbDaxTjHsIOZvOt5L3aJ.jpg"
+            />
+          </a>
+          <div
+            class="content"
           >
-            Bar
-          </option>
-          <option
-            value="baz"
-          >
-            Baz
-          </option>
-        </select>
-        <label
-          for="foo-yes"
-        >
-          yes
-        </label>
-        <input
-          id="foo-yes"
-          name="foo"
-          type="radio"
-          value="yes"
-        />
-        <label
-          for="foo-no"
-        >
-          no
-        </label>
-        <input
-          id="foo-no"
-          name="foo"
-          type="radio"
-          value="no"
-        />
-        <label
-          for="foo-maybe"
-        >
-          maybe
-        </label>
-        <input
-          id="foo-maybe"
-          name="foo"
-          type="radio"
-          value="maybe"
-        />
-        <input
-          type="submit"
-          value="Send it"
-        />
-      </form>
-    </div>
+            <div
+              class="rate"
+            >
+              <span>
+                 
+                81%
+              </span>
+            </div>
+            <p>
+              <a
+                href="/movie/460465"
+                style="text-decoration: none;"
+              >
+                Mortal Kombat
+              </a>
+            </p>
+            <time
+              datetime="2021-04-07"
+            >
+              April 7, 2021
+            </time>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 `;

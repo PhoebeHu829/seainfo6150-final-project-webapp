@@ -1,49 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Anton&family=Crimson+Text:wght@700&display=swap');
-
 .general {
- background-repeat: no-repeat;
- justify-content: space-around;
- background-position: right -200px top;
- background-size: cover;
- margin-right: 0px;
+  background-repeat: no-repeat;
+  justify-content: space-around;
+  background-position: right -200px top;
+  background-size: cover;
+  margin-right: 0px;
+  height: auto;
 }
 
-.poster img{
- height: 60%;
- width: 300px;
- margin-top: 110px;
- margin-left: 100px;
- border-radius: 2%;
- border-width: 0px;
+.poster img {
+  height: 60%;
+  width: 300px;
+  margin-top: 110px;
+  margin-left: 100px;
+  border-radius: 2%;
+  border-width: 0px;
 }
 
-.wrapper{
-  background-image: linear-gradient(to right, rgba(10.98%, 11.76%, 12.55%, 1.00) 150px, rgba(10.98%, 11.76%, 12.55%, 0.84) 100%);
+.wrapper {
+  background-image: linear-gradient(
+    to right,
+    rgba(10.98%, 11.76%, 12.55%, 1) 150px,
+    rgba(10.98%, 11.76%, 12.55%, 0.84) 100%
+  );
   display: flex;
   justify-content: space-around;
   height: 100vh;
+  overflow-y: scroll;
 }
 
-.info{
-  margin:50px;
-  color:  #ddd;
+.info {
+  margin: 50px;
+  color: #ddd;
   font-family: 'Crimson Text', serif;
 }
 
-.info h1, .info h2{
+.info h1,
+.info h2 {
   font-family: 'Acme', sans-serif;
-  color :#ddd;
+  color: #ddd;
 }
 
-.info > span, .info time, .info p span{
+.info > span,
+.info time,
+.info p span {
   margin: 10px;
 }
 
-.cost span{
+.cost span {
   margin: 10px;
 }
 
-.info button{
+.info button {
   height: 40px;
   width: 140px;
   margin: 5px;
@@ -52,36 +59,47 @@
   background-color: antiquewhite;
 }
 
-.signInDetail svg{
-  color:white;
-  width:25px;
-  height:25px;
+.signInDetail svg {
+  color: white;
+  width: 25px;
+  height: 25px;
   margin: 5px;
 }
-.review_link svg:hover,.sign svg:hover{
-  color:yellowgreen;
+.review_link svg:hover,
+.sign svg:hover {
+  color: yellowgreen;
 }
 
-.liked svg{
-  color:red;
+.liked svg {
+  color: red;
 }
 
-.heart svg:hover{
-  color:rgb(187, 93, 93);
+.heart svg:hover {
+  color: rgb(187, 93, 93);
 }
 
-.sign svg{
-  color:white;
+.sign svg {
+  color: white;
   opacity: 0.6;
-  height:100px;
-  width:50px;
+  height: 100px;
+  width: 50px;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 15px;
   margin-left: 15px;
 }
 
-
-.sign{
+.sign {
   display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+  .poster img {
+    height: 40%;
+    width: 200px;
+    margin-left: 50px;
+  }
+  .info {
+    font-size: 12px;
+  }
 }

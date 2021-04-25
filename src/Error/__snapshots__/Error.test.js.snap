@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the home component correctly 1`] = `
+<div>
+  <div
+    class="error_page"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="error"
+        src="https://miro.medium.com/proxy/0*Vio_q5nMzzD4DkWO.JPG"
+      />
+    </a>
+  </div>
+</div>
+`;

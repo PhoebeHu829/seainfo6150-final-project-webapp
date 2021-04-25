@@ -1,4 +1,4 @@
-.contact_page{
+.contact_page {
   display: flex;
   justify-content: flex-start;
   margin-left: 100px;
@@ -8,18 +8,15 @@
   background-position: right bottom;
 }
 
-.contact_page .feedback{
-   height:600px
-}
-.contact_page .feedback h2{
-  margin-top: 30px;
-  margin-left: 80px;
-}
-.contact_page .feedback p{
-  margin: 80px;
+.contact_page .feedback {
+  height: 600px;
 }
 
-.contact_page form{
+.contact_page .feedback h2 {
+  color: rgb(128, 26, 0);
+}
+
+.contact_page form {
   margin-top: 50px;
   padding: 20px;
   box-shadow: 10px 10px 50px rgb(92, 95, 92);
@@ -27,45 +24,66 @@
   font-family: 'Patrick Hand', cursive;
 }
 
-.basicInfo{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; 
+.contact_page .form {
+  display: grid;
+  grid-column-gap: 20px;
+  width: 30%;
 }
 
-.basicInfo div{
+.basicInfo {
+  display: grid;
+  grid-column-gap: 20px;
+}
+
+.basicInfo div {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.contact_page input{
-  height:20px;
+.contact_page input {
+  height: 20px;
 }
 
-.contact_button{
+.contact_button {
   margin-top: 20px;
   margin-bottom: 30px;
-  width:100px;
-  height:50px;
+  width: 200px;
+  height: 50px;
   font-family: 'Patrick Hand', cursive;
+  font-size: 12px;
   border-radius: 50px;
   border-width: 0px;
   background-color: rgb(58, 5, 156);
   color: azure;
 }
 
-.contact_text{
+.contact_text {
   font-family: 'Orelega One', cursive;
   margin-left: 100px;
   margin-right: 50px;
-  width:500px;
-  color:rgb(128, 26, 0);
+  width: 500px;
+  color: rgb(128, 26, 0);
   background-color: white;
   border-radius: 5px;
   opacity: 0.7;
   padding: 5px;
 }
 
-.contact_text p{
+.contact_text p {
   padding: 10px;
+}
+
+.error_report svg {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.error_report p {
+  font-size: 25px;
+}
+
+.contact_page .feedback {
+  display: grid;
+  font-family: 'Patrick Hand', cursive;
 }
